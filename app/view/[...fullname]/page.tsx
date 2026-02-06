@@ -2,8 +2,8 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
-export default async function ProfilePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function ProfilePage({ params }: { params: Promise<{ fullname: string[] }> }) {
+  const { fullname } = await params;
 
   // As if Database Response
   const userDb = [
@@ -16,7 +16,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
     }
   ]
 
-  for (const currentSlug of slug) {
+  for (const currentSlug of fullname) {
     if (currentSlug === "hobbies") {
       return (
         <div className="border p-4 mb-4 rounded-md">
@@ -32,7 +32,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
   }
 
   // Validation
-  const checkValidUser: Boolean = userDb[0].id === slug[0];
+  const checkValidUser: Boolean = userDb[0].id === fullname[0];
   console.log(checkValidUser)
   // If not Valid User
   if (!checkValidUser) {
