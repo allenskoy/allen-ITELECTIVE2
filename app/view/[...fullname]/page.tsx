@@ -8,11 +8,11 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
   // As if Database Response
   const userDb = [
     {
-      id: "jameboy",
-      name: "Jameboy Escartin",
+      id: "allen",
+      name: "Allen Inoc",
       section: "BSIT - 3A",
-      email: "escartinjameboy@gmail.com",
-      hobbies: ["Chess", "Guitar", "Hobby 3"]
+      email: "inocallen2@gmail.com",
+      hobbies: ["Watching Anime", "Playing Online Games", "Basketball"]
     }
   ]
 
@@ -51,7 +51,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
           <h1>{userDb[0].name}</h1>
           <h2>{userDb[0].section}</h2>
           <p className='mb-4'>Email: {userDb[0].email}</p>
-          <Link href="./jameboy/hobbies">
+          <Link href="./allen/hobbies">
             <Button>View Hobbies</Button>
           </Link>
         </div>

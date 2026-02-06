@@ -29,8 +29,8 @@ export function Footer() {
           {/* Contacts */}
           <div>
             <ul>
-              <li><Link href="/">Phone: 123123</Link></li>
-              <li><Link href="/about">Email: test@gmail.com</Link></li>
+              <li><Link href="/">Phone: 09924322271</Link></li>
+              <li><Link href="/about">Email: inocallen2@gmail.com</Link></li>
               <li><Link href="/projects">Github</Link></li>
             </ul>
           </div>
